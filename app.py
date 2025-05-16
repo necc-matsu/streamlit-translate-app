@@ -36,6 +36,9 @@ def japanese_to_romaji(text):
 
 # DeepL翻訳関数
 def deepl_translate(text):
+    if not text.strip():  # ← ここを追加
+        return ""
+        
     try:
         params = {
             "auth_key": DEEPL_API_KEY,
