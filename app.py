@@ -38,7 +38,7 @@ def japanese_to_romaji(text):
 def deepl_translate(text):
     if not text.strip():  # ← ここを追加
         return ""
-        
+    st.write(f"翻訳対象文字列: {text}（長さ: {len(text)}）")    
     try:
         params = {
             "auth_key": DEEPL_API_KEY,
@@ -79,7 +79,6 @@ def translate_text(text, cache):
     remaining = re.findall(r'[\u3040-\u30FF\u4E00-\u9FFF]+', text)
     for part in remaining:
         text = text.replace(part, japanese_to_romaji(part))
-　　st.write(f"翻訳対象文字列: {text}（長さ: {len(text)}）")
     return text
     
 
