@@ -40,6 +40,7 @@ def deepl_translate(text):
         return ""
         
     try:
+        st.write(f"翻訳対象文字列: {text}（長さ: {len(text)}）")
         params = {
             "auth_key": DEEPL_API_KEY,
             "text": text,
@@ -108,5 +109,3 @@ if uploaded_file:
                 file_name="translated.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
-
-print(f"翻訳対象文字列: {text}（長さ: {len(text)}）")
