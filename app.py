@@ -108,3 +108,5 @@ if uploaded_file:
                 file_name="translated.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
+
+print(f"翻訳対象文字列: {text}（長さ: {len(text)}）")
