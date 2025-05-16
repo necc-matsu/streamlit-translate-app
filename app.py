@@ -106,4 +106,3 @@ if uploaded_file:
                 file_name="translated.xlsx",
                 mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
-st.write("列名一覧:", df.columns.tolist())
