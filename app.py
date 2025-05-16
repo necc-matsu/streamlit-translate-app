@@ -80,19 +80,6 @@ def translate_text(text, cache):
         text = text.replace(part, japanese_to_romaji(part))
     return text
     
-def test_deepl():
-    params = {
-        "auth_key": st.secrets["DEEPL_API_KEY"],
-        "text": "これはテストです。",
-        "source_lang": "JA",
-        "target_lang": "EN"
-    }
-    response = requests.post("https://api-free.deepl.com/v2/translate", data=params)
-    st.write(response.status_code)
-    st.write(response.text)
-
-test_deepl()
-
 # Streamlit UI
 st.title("Excel翻訳アプリ（DeepL API対応）")
 uploaded_file = st.file_uploader("Excelファイルをアップロードしてください", type=["xlsx", "xls", "xlsm"])
