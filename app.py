@@ -79,9 +79,9 @@ def translate_text(text, cache):
     remaining = re.findall(r'[\u3040-\u30FF\u4E00-\u9FFF]+', text)
     for part in remaining:
         text = text.replace(part, japanese_to_romaji(part))
-
+　　st.write(f"翻訳対象文字列: {text}（長さ: {len(text)}）")
     return text
-    st.write(f"翻訳対象文字列: {text}（長さ: {len(text)}）")
+    
 
 # Streamlit UI
 st.title("Excel翻訳アプリ（DeepL API対応）")
