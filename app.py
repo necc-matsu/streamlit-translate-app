@@ -40,7 +40,6 @@ def deepl_translate(text):
         return ""
         
     try:
-        st.write(f"翻訳対象文字列: {text}（長さ: {len(text)}）")
         params = {
             "auth_key": DEEPL_API_KEY,
             "text": text,
@@ -82,6 +81,7 @@ def translate_text(text, cache):
         text = text.replace(part, japanese_to_romaji(part))
 
     return text
+    st.write(f"翻訳対象文字列: {text}（長さ: {len(text)}）")
 
 # Streamlit UI
 st.title("Excel翻訳アプリ（DeepL API対応）")
