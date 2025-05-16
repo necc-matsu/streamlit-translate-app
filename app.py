@@ -7,7 +7,7 @@ import requests
 from unidecode import unidecode
 
 # DeepL API設定（ここにあなたのAPIキーを入力してください）
-DEEPL_API_KEY = st.secrets["DEEPL_API_KEY"]
+DEEPL_API_KEY = st.secrets["DEEPL API KEY"]
 DEEPL_API_URL = "https://api-free.deepl.com/v2/translate"
 
 # キャッシュファイル名
